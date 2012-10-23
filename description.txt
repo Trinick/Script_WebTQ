@@ -1,0 +1,6 @@
+Title: Script_WebTQ
+Author: Slicksilver555
+Web Server for Torque
+
+Documentation can be found at:
+https://github.com/slicksilver555/Script_WebTQ
