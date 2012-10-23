@@ -19,6 +19,8 @@ function WebTQ_Core::addClient(%this, %tcp)
 
 function WebTQ_Core::removeClient(%this, %tcp)
 {
+	%this.client[%tcp.clientNum] = 0;
+	%this.connectedClients--;
 	if(isObject(%this.client[%tcp.clientNum+1]))
 	{
 		%i = %tcp.clientNum;
@@ -27,7 +29,6 @@ function WebTQ_Core::removeClient(%this, %tcp)
 			%this.client[%i-1] = %this.client[%i];
 		}
 		%this.client[%i-1] = 0;
-		%this.connectedClients--;
 	}
 }
 
